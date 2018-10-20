@@ -11,7 +11,6 @@ def index():
 @app.route("/api")
 def api():
 	data = {}
-	data_list = []
 	csvs = [row for row in csv.reader(open('pencairan-pedesaan.csv', 'r'))]
 	data['data'] = csvs
 	return jsonify(data)
